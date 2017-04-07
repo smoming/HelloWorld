@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:HelloWorld" 
+	x:Class="HelloWorld.HelloWorldPage">
+
+<!--	泛型 x:TypeArguments="Thickness"-->
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" 
+			iOS="0, 20, 0, 0" 
+			Android = "0"></OnPlatform>
+	</ContentPage.Padding>
+	
+<!--	BindingContext has two property 'Source' and 'Path'.-->
+<!--	Binding to Parent find BindingContext-->
+	<ContentPage.Content>
+		<StackLayout BindingContext = "{x:Reference Name = slider1}">
+			<Label x:Name = "label1" 
+				
+				Text="{ Binding Path=Value, StringFormat='Value is {0:F2}' }" 
+				VerticalOptions="Center" 
+				HorizontalOptions="Center" />
+			<Label x:Name = "label2" 
+				
+				Text="This is label2" 
+				Opacity="{ Binding Value }"
+				VerticalOptions="Center" 
+				HorizontalOptions="Center" />
+			<Slider x:Name = "slider1" Maximum="1"></Slider>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

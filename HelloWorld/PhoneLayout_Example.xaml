@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="HelloWorld.PhoneLayout_Example">
+
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
+	</ContentPage.Padding>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="100"></ColumnDefinition>
+			<ColumnDefinition Width="100"></ColumnDefinition>
+			<ColumnDefinition Width="100"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="100"></RowDefinition>
+			<RowDefinition Height="100"></RowDefinition>
+			<RowDefinition Height="100"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<Label Text = "00" BackgroundColor = "Red" Grid.Row="0" Grid.Column="0"></Label>
+		<Label Text = "01" BackgroundColor = "Blue" Grid.Row="0" Grid.Column="1"></Label>
+		<Label Text = "02" BackgroundColor = "Yellow" Grid.Row="0" Grid.Column="2"></Label>
+		<Label Text = "10" BackgroundColor = "Silver" Grid.Row="1" Grid.Column="0"></Label>
+		<Label Text = "11" BackgroundColor = "Green" Grid.Row="1" Grid.Column="1"></Label>
+		<Label Text = "12" BackgroundColor = "Aqua" Grid.Row="1" Grid.Column="2"></Label>
+		<Label Text = "20" BackgroundColor = "Fuchsia" Grid.Row="2" Grid.Column="0"></Label>
+		<Label Text = "21" BackgroundColor = "Olive" Grid.Row="2" Grid.Column="1"></Label>
+		<Label Text = "22" BackgroundColor = "Maroon" Grid.Row="2" Grid.Column="2"></Label>
+	</Grid>
+	
+</ContentPage>
